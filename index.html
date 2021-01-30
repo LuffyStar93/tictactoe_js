@@ -9,7 +9,7 @@
     <title>TIC-TAC-TOE</title>
 </head>
 <body>
-   <!-- 
+   
     <section id="Welcome_section">
       <div id="mon_conteneur">
       <p class="neon">Tic Tac </p>
@@ -36,18 +36,20 @@
         </div>
             <p id="player">Joueur X/O à toi de jouer</p>
     </section> 
--->
+
     <section style="flex-direction: column;
     align-items: center;
     justify-content: center; border: 0.4rem solid rgb(240, 12, 12);
         border-radius: 2rem;
-        text-transform: uppercase; background-color:blue;">
+        text-transform: uppercase; background-color:rgb(35, 35, 36); background:radial-gradient(#050526 0%,black 90%) -20vw 10vh no-repeat black;
+    ">
         <div>
-            <span  align-items: center>
+            <span style="align-items: center">
                 <h1 style="justify-content:center;
                 align-items: center;
                 color: white;
-                text-align:center; ">WINNER</h1>
+                text-align:center; font-size: 11em;
+    margin-bottom: 0;">WINNER</h1>
                 <p style="justify-content:center;
                 align-items: center;
                 color: white;
@@ -63,10 +65,24 @@
             color: white;
             text-align:center;">REJOUER</p>
         </div>
-        <div id="editor" style="display: flex;
+        <div id="startbutton" class='game-element gamefont startfont'>Play</div>
+        <div class="flux" id="editor" style="display: flex;
         align-items: center;
-        justify-content: center; color: white;">
+        justify-content: center; color: rgb(255, 255, 255);  ">
+        editeur</div>
+    <div>
+        
+        <div>Insert Coin</div>
+        <div id="coin">
+
         </div>
+  <div class='game-element gamefont devfont'>
+    by <a class='devlink'>TeamSimplon</a>
+  <br><br><span>&copy; 2021</span>&nbsp;</div>
+        </div>
+    </div>
+
+
         
     </section>
     <script src="./script.js"></script>

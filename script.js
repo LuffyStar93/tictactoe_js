@@ -98,7 +98,6 @@ function checkWin() {
 
 
 //Momo Js
-//var $text = $('.editor-text');
 
 function set(txt) {
   // ajoute le nouvel élément créé et son contenu dans le DOM
@@ -130,7 +129,7 @@ function assemble(statements) {
 
     statements.forEach(function (stmt) {
         var sliced = slicer(stmt);
-        var interstatementPause = pause("", 3);
+        var interstatementPause = pause(" ", 3);
         slices = slices.concat(sliced);
 
         // Pause on the completed statement
