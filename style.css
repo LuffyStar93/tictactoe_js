@@ -7,12 +7,20 @@
 
 
 
+
+
 body{
     background:radial-gradient(#050526 0%,black 90%) -20vw 10vh no-repeat black;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
+
+#title_neon{
+  text-align: center;
+  width: 100%;
+  margin: 25px 0px 20px;
+}
 
 #Welcome_section{
     
@@ -23,7 +31,7 @@ body{
     align-items: center;
     color: white;
     text-align:center;
-    height:100vh;
+    /* height:100vh; */
 }
 @font-face {
     font-family: neon;
@@ -33,16 +41,16 @@ body{
   .neon {
     font-family: neon;
     color: #FB4264;
-    font-size: 9vw;
-    line-height: 9vw;
+    font-size: 100px;
+    line-height: 100px;
     text-shadow: 0 0 3vw #F40A35;
   }
   
   .flux {
     font-family: neon;
     color: #426DFB;
-    font-size: 9vw;
-    line-height: 9vw;
+    font-size: 100px;
+    line-height: 100px;
     text-shadow: 0 0 3vw #2356FF;
   }
   
@@ -90,13 +98,14 @@ body{
 h1{
   color: blue;
   font-size: 40px;
+  margin-top: 30px;
 }
 #Welcome{
   color: blue;
 }
 
 #Game_section{
-    height: 100vh;
+    /* height: 100vh; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -174,4 +183,35 @@ cursor: pointer;
     margin: 20px 0px;
 }
 
+ /* Section 3 */
 
+#resultat_section{
+  text-align: center;
+  display: flex;
+  color: blue;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#winner{
+  font-size: 50px;
+}
+
+#replay{
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkblue;
+  background: blue;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#replay:hover{
+  color: blue;
+  background: darkblue;
+}

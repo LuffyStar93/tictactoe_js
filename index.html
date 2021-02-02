@@ -9,11 +9,13 @@
     <title>TIC-TAC-TOE</title>
 </head>
 <body>
-    
+    <div id="title_neon">
+        <p class="neon">Tic Tac </p>
+        <p class="flux">Toe </p>
+    </div>
     <section id="Welcome_section">
       <div id="mon_conteneur">
-      <p class="neon">Tic Tac </p>
-      <p class="flux">Toe </p>   
+
       <p id="Welcome">The most exciting tic-tac-toe of simplon history. One of a kind!</p>  
         <h1>Qui commence ?</h1>  
     
@@ -35,17 +37,14 @@
                 <div class="case"></div>
             </div>
         </div>
-            <p id="player">Joueur X/O à toi de jouer</p>
+            <p id="player"></p>
     </section>
-    <section id ="resultat_section">
-        <div>
-            <img="https://assets.codepen.io/605876/css-tic-tac-toe.png"></img=>
-            <span>Le joueur 1 à gagné</span>
-        </div>
-        <div id="replay">
-            <button>REJOUER</button>
-        </div>
-        </section> -->
+    <section id ="resultat_section" class="display_none">
+       
+            <p id="winner"></p>
+            <p id="replay">REJOUER</p>
+
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>
