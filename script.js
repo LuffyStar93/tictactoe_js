@@ -129,7 +129,7 @@ function assemble(statements) {
 
     statements.forEach(function (stmt) {
         var sliced = slicer(stmt);
-        var interstatementPause = pause(" ", 3);
+        var interstatementPause = pause("", 3);
         slices = slices.concat(sliced);
 
         // Pause on the completed statement
@@ -145,9 +145,8 @@ function assemble(statements) {
 var statements = [
     "You win...",
     "You lose...",
-    "Again a party?...",
-    "Are you here ?...",
-    "Are you afraid to lose ?...",
+    "Retry?...",
+    
 ]
 
 function rand(min, max) {

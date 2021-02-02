@@ -182,206 +182,84 @@ cursor: pointer;
 
 
 
-.scoreBord{
-  font-family: 'Exo 2', sans-serif;
+
+#Result_section{
+  font-family:'Abril Fatface';
+    font-size: 20px; 
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align:center;
+
+}
+
+
+
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;  
-  background: #000;
-  min-height: 100vh;
-  display: flex;
+  flex:center;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  }
+#box {
+  display:flex;
   flex-direction: column;
-  border: 1px solid #c3c3c3;
-  display: flex;
-  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  color: white;
+  text-align:center;
+  padding: 9rem;
+  opacity: .8;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.66);
+
 }
-#editor {
-  color:#9F9;
-  font-size: 3em;
-  text-shadow: 1px 0px 5px rgb(255, 0, 149), 
-    -1px 0px 2px rgb(255, 0, 0);
+#neon {
+  padding: 4rem;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  color: #fff;
+  box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 2rem #08f,
+    inset 0 0 2rem #08f,
+    0 0 4rem #08f,
+    inset 0 0 4rem #08f;        
+    }    
+    #neon::-moz-selection {
+        background-color: #08f;  
+    }
+    #neon::selection {
+        background-color: #08f;
+    }
+    #neon:focus {
+        outline: none;
+    }
+
+    #box.h1 {
+      font-size: 13rem;
+      font-weight: 200;
+      font-style: italic;
+      color: #fff;
+      padding: 4rem 6rem 5.5rem;
+     text-transform: uppercase;
+      animation: flicker 1.5s infinite alternate;     
+    }
     
-  font-family: Ubuntu Mono;
-  font-weight: light;
-  line-height: 2em;
-}
-
-#arcade-button {
-  
-  font-size: 50px;
-  margin: 20px 0 0 20px;
-  border: none;
-  width: 4em;
-  height: 3.5em;
-  position: relative;
-  background-color: rgb(50, 50, 200);
-}
-
-.frame1 {
-  text-align: center;
-  margin: auto;
-  z-index: 10;
-  margin-top: 75px;
-}
-#coin{ 
-  color: white;
-  width : 100%;
-  text-align: center;
-  margin: auto;
-  font-size: 40px;
-  line-height: 40px;
-  letter-spacing: 5px;
-  text-shadow: -2px 0 0 #fdff2a
-    -4px 0 0 #df4a42,
-    2px 0 0 #91fcfe,
-    4px 0 0 #4405fc;
-  animation: blink 1s steps(4, start) infinite; 
- @keyframes blink
-   to
-     visibility: hidden
-  
-}
-
-
-@import "compass/css3";
-$screen-background: #121010;
-
-a {
-  color: white;
-}
-
-
-#title {
-  display: normal;
-}
-#info {
-  display: none;
-}
-.game-element {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-.gamefont {
-  color: lightblue;
-  font-family: PressStart2PRegular;
-  font-weight: bold;
-  letter-spacing: -2px;
-  -webkit-filter: blur(1px);
-}
-.titlefont {
-  top: 15%;
-  left: 2%;
-  width: 96%;
-  text-align: center;
-  font-size: 80px;
-  letter-spacing: -6px;
-}
-.title2font{
-  font-size:25px;
-  top:30%;
-}
-.startfont {
-  top: 45%;
-  font-size: 50px;
-  width: 220px;
-  left: -110px;
-  text-align: center;
-  margin-left: 50%;
-  letter-spacing: -3px;
-  border: 3px solid lightblue;
-  padding: 15px;
-  border-radius: 15px;
-}
-.startfont:hover {
-  color: white;
-  border-color: white;
-  transform: scale(0.99,0.99);
-}
-.devfont {
-  top: 80%;
-  width: 80%;
-  left: 10%;
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: -3px;
-}
-.devlink {
-  display: inline-block;
-}
-.devlink:hover {
-  color: white;
-  border-color: white;
-  transform: scale(0.99,0.99);
-}
-.score {
-  font-size: 45px;
-  left: 50px;
-  top: 20px;
-  text-align: left;
-  z-index: -5;
-}
-.star {
-  width: 2px;
-  height: 2px;
-  background-color: white;
-  border-radius: 50%;
-  left: 200px;
-  top: 200px;
-  opacity: 0.8;
-  z-index: -10;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.asteroid {
-  width: 100px;
-  height: 100px;
-  left: 300px;
-  top: 300px;
-  float: left;
-  fill: rgb(20,20,40); // #191970
-  stroke: rgb(160,160,160);
-  stroke-width: 4px;
-  opacity: 1;
-  animation: spin 32s infinite linear;
-  z-index: -9;
-}
-.bullet {
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  left: 100px;
-  top: 150px;
-  opacity: 0.95;
-  z-index: -7;
-}
-
-
-/*  CRT effect  */
-@keyframes hard-flicker {
-  $steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i / $steps)} {
-      opacity: random();
+    h1::-moz-selection {
+      background-color: var(--neon-border-color);
+      color: var(--neon-text-color);
     }
-  }
-}
-
-@keyframes soft-flicker {
-  steps: 20;
-  @for $i from 0 through $steps {
-    #{percentage($i / $steps)} {
-      opacity: 0.175 * (4 + random());
+    
+    h1::selection {
+      background-color: var(--neon-border-color);
+      color: var(--neon-text-color);
     }
-  }
-}
-
+    
+    h1:focus {
+      outline: none;
+    }
