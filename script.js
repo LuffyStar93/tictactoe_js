@@ -2,7 +2,25 @@
 
 //GAME PART
 
-let CURRENT_PLAYER = "X"
+let welcome_section = document.querySelector("#Welcome_section")
+let game_section = document.querySelector("#Game_section")
+let CURRENT_PLAYER = ""
+
+
+document.querySelector("#player_X").addEventListener("click", function(){
+    CURRENT_PLAYER = "X"
+    console.log(CURRENT_PLAYER)
+    welcome_section.classList.add("display_none");
+    game_section.classList.remove("display_none");
+})
+
+document.querySelector("#player_O").addEventListener("click", function(){
+    CURRENT_PLAYER = "O"
+    console.log(CURRENT_PLAYER)
+    welcome_section.classList.add("display_none");
+    game_section.classList.remove("display_none");
+})
+
 
 
 let allCases = document.querySelectorAll(".case")
