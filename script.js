@@ -1,18 +1,42 @@
+// SECTION 1
 
+let player_X = document.querySelector("#player_X") ;
+let player_O = document.querySelector("#player_O") ;
+let welcome_section = document.querySelector("#Welcome_section");
+let game_section = document.querySelector("#Game_section");
+let player = document.querySelector("#player");
+var CURRENT_PLAYER = "";
+
+
+player_X.addEventListener("click", () =>{
+    CURRENT_PLAYER = "X"
+    console.log(CURRENT_PLAYER);
+    welcome_section.classList.add("display_none");
+    game_section.classList.remove("display_none");
+    player.innerText =`Joueur ${CURRENT_PLAYER} à toi de jouer`;
+} )
+
+player_O.addEventListener("click", () =>{
+    CURRENT_PLAYER = "O"
+    console.log(CURRENT_PLAYER);
+    welcome_section.classList.add("display_none");
+    game_section.classList.remove("display_none");
+    player.innerText =`Joueur ${CURRENT_PLAYER} à toi de jouer`;
+} )
 
 //GAME PART
-
-let CURRENT_PLAYER = "X"
-
-
+ 
 let allCases = document.querySelectorAll(".case")
 allCases.forEach(cell => {
     cell.addEventListener("click", function(event){
         event.target.innerText = CURRENT_PLAYER;
+        
         if (CURRENT_PLAYER === "X"){
             CURRENT_PLAYER = "O";
+            player.innerText =`Joueur ${CURRENT_PLAYER} à toi de jouer`;
         } else {
             CURRENT_PLAYER = 'X';
+            player.innerText =`Joueur ${CURRENT_PLAYER} à toi de jouer`;
         }
 
 

@@ -81,7 +81,9 @@ body{
     }
   }
     
-
+.display_none{
+  display: none !important;
+}
 #Game_section{
     height: 100vh;
     text-align: center;
